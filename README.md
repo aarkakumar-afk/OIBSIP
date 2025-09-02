@@ -63,4 +63,41 @@ else:
 print("\nMy BMI is: {:.2f}".format(bmi))
 print("I am classified as:", category)
 
+___________________________________________________________________________________________________________________________________________
+
+#RANDOM PASSWORD GENERATOR
+
+import random
+import string
+
+
+length = int(input("How many characters should the password have? "))
+
+
+use_letters = input("Do you want letters? (yes/no): ")
+use_numbers = input("Do you want numbers? (yes/no): ")
+use_symbols = input("Do you want symbols? (yes/no): ")
+
+characters = ""
+
+if use_letters:
+    characters += string.ascii_letters
+if use_numbers:
+    characters += string.digits
+if use_symbols:
+    characters += string.punctuation
+
+
+if characters == "":
+    print("You must choose at least one option (letters, numbers, or symbols).")
+else:
+
+    password = ""
+    for i in range(length):
+        password += random.choice(characters)
+
+
+    print("\nHere is your password:", password)
+
+
 
