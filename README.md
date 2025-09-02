@@ -42,3 +42,25 @@ def run_assistant():
 
 run_assistant()
 
+__________________________________________________________________________________________________________________________________________
+
+#BMI CALCULATOR
+
+weight = float(input("Enter weight in kilograms: "))
+height = float(input("Enter height in meters: "))
+
+bmi = weight / (height ** 2)
+
+if bmi < 18.5:
+    category = "Underweight"
+elif bmi < 24.9:
+    category = "Normal weight"
+elif bmi < 29.9:
+    category = "Overweight"
+else:
+    category = "Obesity"
+
+print("\nMy BMI is: {:.2f}".format(bmi))
+print("I am classified as:", category)
+
+
